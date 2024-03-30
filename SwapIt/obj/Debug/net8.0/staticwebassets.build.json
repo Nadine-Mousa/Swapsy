@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "AJeRFjvtI34BUYhKdkO3yu24LT6UynY6gqii40BtC/Y=",
+  "Source": "SwapIt",
+  "BasePath": "_content/SwapIt",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "SwapIt\\wwwroot",
+      "Source": "SwapIt",
+      "ContentRoot": "E:\\.Net Projects\\Swapsy\\SwapIt\\wwwroot\\",
+      "BasePath": "_content/SwapIt",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "E:\\.Net Projects\\Swapsy\\SwapIt\\wwwroot\\images\\users\\02.jpg",
+      "SourceId": "SwapIt",
+      "SourceType": "Discovered",
+      "ContentRoot": "E:\\.Net Projects\\Swapsy\\SwapIt\\wwwroot\\",
+      "BasePath": "_content/SwapIt",
+      "RelativePath": "images/users/02.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\users\\02.jpg"
+    }
+  ]
+}

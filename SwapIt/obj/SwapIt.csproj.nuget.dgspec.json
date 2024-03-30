@@ -1,35 +1,36 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hasna\\OneDrive\\Desktop\\FCI\\SwapIt\\SwapIt\\SwapIt.csproj": {}
+    "E:\\.Net Projects\\Swapsy\\SwapIt\\SwapIt.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hasna\\OneDrive\\Desktop\\FCI\\SwapIt\\SwapIt\\SwapIt.csproj": {
+    "E:\\.Net Projects\\Swapsy\\SwapIt\\SwapIt.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hasna\\OneDrive\\Desktop\\FCI\\SwapIt\\SwapIt\\SwapIt.csproj",
+        "projectUniqueName": "E:\\.Net Projects\\Swapsy\\SwapIt\\SwapIt.csproj",
         "projectName": "SwapIt",
-        "projectPath": "C:\\Users\\hasna\\OneDrive\\Desktop\\FCI\\SwapIt\\SwapIt\\SwapIt.csproj",
-        "packagesPath": "C:\\Users\\hasna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hasna\\OneDrive\\Desktop\\FCI\\SwapIt\\SwapIt\\obj\\",
+        "projectPath": "E:\\.Net Projects\\Swapsy\\SwapIt\\SwapIt.csproj",
+        "packagesPath": "C:\\Users\\precision\\.nuget\\packages\\",
+        "outputPath": "E:\\.Net Projects\\Swapsy\\SwapIt\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\hasna\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\precision\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net8.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net8.0": {
+            "targetAlias": "net8.0",
             "projectReferences": {}
           }
         },
@@ -37,50 +38,58 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net8.0": {
+          "targetAlias": "net8.0",
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[8.0.3, )"
             },
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
-              "version": "[3.1.22, )"
+              "version": "[8.0.3, )"
+            },
+            "Microsoft.CodeAnalysis.Common": {
+              "target": "Package",
+              "version": "[4.10.0-2.final, )"
             },
             "Microsoft.CodeAnalysis.Compilers": {
               "target": "Package",
-              "version": "[4.0.1, )"
+              "version": "[4.5.0, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[8.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[8.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[8.0.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer.Design": {
               "target": "Package",
               "version": "[1.1.6, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.12, )"
+              "version": "[8.0.3, )"
             },
             "Microsoft.Net.Compilers": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[4.0.1, )"
+              "version": "[4.2.0-4.final, )"
             },
             "SendGrid": {
               "target": "Package",
@@ -93,16 +102,11 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[3.1.2, 3.1.2]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -111,7 +115,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -6,6 +6,8 @@ using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SwapIt.Models;
 
+#nullable disable
+
 namespace SwapIt.Migrations
 {
     [DbContext(typeof(ApplicationDB))]
@@ -15,17 +17,19 @@ namespace SwapIt.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("Relational:Collation", "Arabic_CI_AS")
-                .HasAnnotation("Relational:MaxIdentifierLength", 128)
-                .HasAnnotation("ProductVersion", "5.0.12")
-                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                .UseCollation("Arabic_CI_AS")
+                .HasAnnotation("ProductVersion", "8.0.3")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128);
+
+            SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
@@ -41,15 +45,16 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetRoleClaims");
+                    b.ToTable("AspNetRoleClaims", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("ClaimType")
                         .HasColumnType("nvarchar(max)");
@@ -65,7 +70,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserClaims");
+                    b.ToTable("AspNetUserClaims", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
@@ -87,7 +92,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("AspNetUserLogins");
+                    b.ToTable("AspNetUserLogins", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
@@ -102,7 +107,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("RoleId");
 
-                    b.ToTable("AspNetUserRoles");
+                    b.ToTable("AspNetUserRoles", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
@@ -121,7 +126,7 @@ namespace SwapIt.Migrations
 
                     b.HasKey("UserId", "LoginProvider", "Name");
 
-                    b.ToTable("AspNetUserTokens");
+                    b.ToTable("AspNetUserTokens", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.Cart", b =>
@@ -143,7 +148,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Cart");
+                    b.ToTable("Cart", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.Category", b =>
@@ -151,8 +156,9 @@ namespace SwapIt.Migrations
                     b.Property<int>("CategoryId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("category_id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnName("category_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("CategoryId"));
 
                     b.Property<string>("CategoryImage")
                         .IsRequired()
@@ -170,7 +176,7 @@ namespace SwapIt.Migrations
 
                     b.HasKey("CategoryId");
 
-                    b.ToTable("Category");
+                    b.ToTable("Category", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.CategoryDepartment", b =>
@@ -178,8 +184,9 @@ namespace SwapIt.Migrations
                     b.Property<int>("DepartmentId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("department_id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnName("department_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("DepartmentId"));
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int")
@@ -197,7 +204,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("CategoryId");
 
-                    b.ToTable("CategoryDepartment");
+                    b.ToTable("CategoryDepartment", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.Chat", b =>
@@ -205,8 +212,9 @@ namespace SwapIt.Migrations
                     b.Property<int>("MessageId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("message_id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnName("message_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("MessageId"));
 
                     b.Property<string>("FromId")
                         .HasColumnType("nvarchar(450)")
@@ -242,7 +250,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("ToId");
 
-                    b.ToTable("Chat");
+                    b.ToTable("Chat", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.Creditcard", b =>
@@ -273,12 +281,12 @@ namespace SwapIt.Migrations
                         .IsUnicode(false)
                         .HasColumnType("char(3)")
                         .HasColumnName("credit_card_password")
-                        .IsFixedLength(true);
+                        .IsFixedLength();
 
                     b.HasKey("CreditCardNumber")
                         .HasName("PK__Creditca__252A27B11EDAB5BE");
 
-                    b.ToTable("Creditcard");
+                    b.ToTable("Creditcard", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.Favourite", b =>
@@ -296,7 +304,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("Favourite");
+                    b.ToTable("Favourite", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.OrderInformation", b =>
@@ -318,7 +326,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("OrderInformation");
+                    b.ToTable("OrderInformation", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.Product", b =>
@@ -326,8 +334,9 @@ namespace SwapIt.Migrations
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("product_id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnName("product_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ProductId"));
 
                     b.Property<int>("CategoryId")
                         .HasColumnType("int");
@@ -403,7 +412,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("Product");
+                    b.ToTable("Product", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.ProductImage", b =>
@@ -421,7 +430,7 @@ namespace SwapIt.Migrations
                     b.HasKey("ProductId", "ProductImage1")
                         .HasName("PK__ProductI__2B90AE2090A7DA7C");
 
-                    b.ToTable("ProductImage");
+                    b.ToTable("ProductImage", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.ProductReview", b =>
@@ -429,8 +438,9 @@ namespace SwapIt.Migrations
                     b.Property<int>("ReviewId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("review_id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnName("review_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewId"));
 
                     b.Property<string>("FromId")
                         .HasColumnType("nvarchar(450)")
@@ -460,7 +470,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("ProductId");
 
-                    b.ToTable("ProductReview");
+                    b.ToTable("ProductReview", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.Role", b =>
@@ -487,7 +497,7 @@ namespace SwapIt.Migrations
                         .HasDatabaseName("RoleNameIndex")
                         .HasFilter("[NormalizedName] IS NOT NULL");
 
-                    b.ToTable("AspNetRoles");
+                    b.ToTable("AspNetRoles", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.User", b =>
@@ -593,7 +603,7 @@ namespace SwapIt.Migrations
                         .HasDatabaseName("UserNameIndex")
                         .HasFilter("[NormalizedUserName] IS NOT NULL");
 
-                    b.ToTable("AspNetUsers");
+                    b.ToTable("AspNetUsers", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.UserFollowing", b =>
@@ -611,7 +621,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("FollowingId");
 
-                    b.ToTable("UserFollowing");
+                    b.ToTable("UserFollowing", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.UserOrder", b =>
@@ -619,8 +629,9 @@ namespace SwapIt.Migrations
                     b.Property<int>("OrderId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("order_id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnName("order_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("OrderId"));
 
                     b.Property<DateTime>("OrderDate")
                         .HasColumnType("date")
@@ -653,7 +664,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("UserId");
 
-                    b.ToTable("UserOrder");
+                    b.ToTable("UserOrder", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.UserRating", b =>
@@ -661,8 +672,9 @@ namespace SwapIt.Migrations
                     b.Property<int>("RatingId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("rating_id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnName("rating_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("RatingId"));
 
                     b.Property<string>("FromId")
                         .HasColumnType("nvarchar(450)")
@@ -683,7 +695,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("ToId");
 
-                    b.ToTable("UserRating");
+                    b.ToTable("UserRating", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.UserReview", b =>
@@ -691,8 +703,9 @@ namespace SwapIt.Migrations
                     b.Property<int>("ReviewId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
-                        .HasColumnName("review_id")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+                        .HasColumnName("review_id");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ReviewId"));
 
                     b.Property<string>("FromId")
                         .HasColumnType("nvarchar(450)")
@@ -722,7 +735,7 @@ namespace SwapIt.Migrations
 
                     b.HasIndex("ToId");
 
-                    b.ToTable("UserReview");
+                    b.ToTable("UserReview", (string)null);
                 });
 
             modelBuilder.Entity("SwapIt.Models.UsersAndCard", b =>
@@ -801,14 +814,14 @@ namespace SwapIt.Migrations
                     b.HasOne("SwapIt.Models.Product", "Product")
                         .WithMany("Carts")
                         .HasForeignKey("ProductId")
-                        .HasConstraintName("FK__Cart__product_id__6E01572D")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__Cart__product_id__6E01572D");
 
                     b.HasOne("SwapIt.Models.User", "User")
                         .WithMany("Carts")
                         .HasForeignKey("UserId")
-                        .HasConstraintName("FK__Cart__user_id__6D0D32F4")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__Cart__user_id__6D0D32F4");
 
                     b.Navigation("Product");
 
@@ -820,8 +833,8 @@ namespace SwapIt.Migrations
                     b.HasOne("SwapIt.Models.Category", "Category")
                         .WithMany("CategoryDepartments")
                         .HasForeignKey("CategoryId")
-                        .HasConstraintName("FK__CategoryD__categ__5441852A")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__CategoryD__categ__5441852A");
 
                     b.Navigation("Category");
                 });
@@ -848,14 +861,14 @@ namespace SwapIt.Migrations
                     b.HasOne("SwapIt.Models.Product", "Product")
                         .WithMany("Favourites")
                         .HasForeignKey("ProductId")
-                        .HasConstraintName("FK__Favourite__produ__71D1E811")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__Favourite__produ__71D1E811");
 
                     b.HasOne("SwapIt.Models.User", "User")
                         .WithMany("Favourites")
                         .HasForeignKey("UserId")
-                        .HasConstraintName("FK__Favourite__user___70DDC3D8")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__Favourite__user___70DDC3D8");
 
                     b.Navigation("Product");
 
@@ -867,14 +880,14 @@ namespace SwapIt.Migrations
                     b.HasOne("SwapIt.Models.UserOrder", "Order")
                         .WithMany("OrderInformations")
                         .HasForeignKey("OrderId")
-                        .HasConstraintName("FK__OrderInfo__order__7B5B524B")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__OrderInfo__order__7B5B524B");
 
                     b.HasOne("SwapIt.Models.Product", "Product")
                         .WithMany("OrderInformations")
                         .HasForeignKey("ProductId")
-                        .HasConstraintName("FK__OrderInfo__produ__7C4F7684")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__OrderInfo__produ__7C4F7684");
 
                     b.Navigation("Order");
 
@@ -886,8 +899,8 @@ namespace SwapIt.Migrations
                     b.HasOne("SwapIt.Models.CategoryDepartment", "Department")
                         .WithMany("Products")
                         .HasForeignKey("DepartmentId")
-                        .HasConstraintName("FK__Product__departm__5812160E")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__Product__departm__5812160E");
 
                     b.HasOne("SwapIt.Models.User", "User")
                         .WithMany("Products")
@@ -904,8 +917,8 @@ namespace SwapIt.Migrations
                     b.HasOne("SwapIt.Models.Product", "Product")
                         .WithMany("ProductImages")
                         .HasForeignKey("ProductId")
-                        .HasConstraintName("FK__ProductIm__produ__5AEE82B9")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__ProductIm__produ__5AEE82B9");
 
                     b.Navigation("Product");
                 });
@@ -920,8 +933,8 @@ namespace SwapIt.Migrations
                     b.HasOne("SwapIt.Models.Product", "Product")
                         .WithMany("ProductReviews")
                         .HasForeignKey("ProductId")
-                        .HasConstraintName("FK__ProductRe__produ__5EBF139D")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__ProductRe__produ__5EBF139D");
 
                     b.Navigation("From");
 
@@ -933,14 +946,14 @@ namespace SwapIt.Migrations
                     b.HasOne("SwapIt.Models.User", "Following")
                         .WithMany("UserFollowingFollowings")
                         .HasForeignKey("FollowingId")
-                        .HasConstraintName("FK__UserFollo__follo__75A278F5")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__UserFollo__follo__75A278F5");
 
                     b.HasOne("SwapIt.Models.User", "User")
                         .WithMany("UserFollowingUsers")
                         .HasForeignKey("UserId")
-                        .HasConstraintName("FK__UserFollo__user___74AE54BC")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__UserFollo__user___74AE54BC");
 
                     b.Navigation("Following");
 
@@ -996,14 +1009,14 @@ namespace SwapIt.Migrations
                     b.HasOne("SwapIt.Models.Creditcard", "CreditCardNumberNavigation")
                         .WithMany("UsersAndCards")
                         .HasForeignKey("CreditCardNumber")
-                        .HasConstraintName("FK__UsersAndC__credi__4F7CD00D")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__UsersAndC__credi__4F7CD00D");
 
                     b.HasOne("SwapIt.Models.User", "User")
                         .WithMany("UsersAndCards")
                         .HasForeignKey("UserId")
-                        .HasConstraintName("FK__UsersAndC__user___4E88ABD4")
-                        .IsRequired();
+                        .IsRequired()
+                        .HasConstraintName("FK__UsersAndC__user___4E88ABD4");
 
                     b.Navigation("CreditCardNumberNavigation");
 

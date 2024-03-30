@@ -39,7 +39,7 @@ namespace SwapIt.Models
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=HASNAA\\SQLEXPRESS2017;Initial Catalog=SwapItDB;Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=DESKTOP-OEHGGNL\\SQLSERVERDEV2022;Initial Catalog=Swapsy;Integrated Security=True");
             }
         }
 

@@ -1,0 +1,155 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\.Net Projects\\Swapsy\\SwapIt\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|e:\\.net projects\\swapsy\\swapit\\startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|solutionrelative:startup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|e:\\.net projects\\swapsy\\swapit\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|solutionrelative:controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|e:\\.net projects\\swapsy\\swapit\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|e:\\.net projects\\swapsy\\swapit\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|e:\\.net projects\\swapsy\\swapit\\models\\swapitdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|solutionrelative:models\\swapitdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|e:\\.net projects\\swapsy\\swapit\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|solutionrelative:controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|e:\\.net projects\\swapsy\\swapit\\migrations\\20240329153048_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{782EA7E7-2240-4258-89AA-86B9F6D76D4E}|SwapIt.csproj|solutionrelative:migrations\\20240329153048_initialmigration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Startup.cs",
+              "DocumentMoniker": "E:\\.Net Projects\\Swapsy\\SwapIt\\Startup.cs",
+              "RelativeDocumentMoniker": "Startup.cs",
+              "ToolTip": "E:\\.Net Projects\\Swapsy\\SwapIt\\Startup.cs",
+              "RelativeToolTip": "Startup.cs",
+              "ViewState": "AQIAAFEAAAAAMDMzMzMfwGIAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T11:34:21.517Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "E:\\.Net Projects\\Swapsy\\SwapIt\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UserController.cs",
+              "ToolTip": "E:\\.Net Projects\\Swapsy\\SwapIt\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Controllers\\UserController.cs",
+              "ViewState": "AQIAAAoAAADAMjMzMzMvwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T15:42:08.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "SwapItDBContext.cs",
+              "DocumentMoniker": "E:\\.Net Projects\\Swapsy\\SwapIt\\Models\\SwapItDBContext.cs",
+              "RelativeDocumentMoniker": "Models\\SwapItDBContext.cs",
+              "ToolTip": "E:\\.Net Projects\\Swapsy\\SwapIt\\Models\\SwapItDBContext.cs",
+              "RelativeToolTip": "Models\\SwapItDBContext.cs",
+              "ViewState": "AQIAABAAAAAAMzMzMzM/wBMCAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T15:26:38.064Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\.Net Projects\\Swapsy\\SwapIt\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\.Net Projects\\Swapsy\\SwapIt\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABYAAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T15:25:16.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\.Net Projects\\Swapsy\\SwapIt\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "E:\\.Net Projects\\Swapsy\\SwapIt\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAABtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-29T15:24:33.183Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountsController.cs",
+              "DocumentMoniker": "E:\\.Net Projects\\Swapsy\\SwapIt\\Controllers\\AccountsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\AccountsController.cs",
+              "ToolTip": "E:\\.Net Projects\\Swapsy\\SwapIt\\Controllers\\AccountsController.cs",
+              "RelativeToolTip": "Controllers\\AccountsController.cs",
+              "ViewState": "AQIAALwBAAAAaGZmZoYywDQAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T06:39:19.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "20240329153048_InitialMigration.cs",
+              "DocumentMoniker": "E:\\.Net Projects\\Swapsy\\SwapIt\\Migrations\\20240329153048_InitialMigration.cs",
+              "RelativeDocumentMoniker": "Migrations\\20240329153048_InitialMigration.cs",
+              "ToolTip": "E:\\.Net Projects\\Swapsy\\SwapIt\\Migrations\\20240329153048_InitialMigration.cs",
+              "RelativeToolTip": "Migrations\\20240329153048_InitialMigration.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-29T15:30:48.212Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\.Net Projects\\Swapsy\\SwapIt\\wwwroot\\images\\users\\02.jpg",
+      "PackagePath": "staticwebassets\\images\\users\\02.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.SwapIt.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.SwapIt.props",
+      "PackagePath": "build\\SwapIt.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.SwapIt.props",
+      "PackagePath": "buildMultiTargeting\\SwapIt.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.SwapIt.props",
+      "PackagePath": "buildTransitive\\SwapIt.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
